@@ -148,7 +148,7 @@ console.log(medianQuickselect(arr));
 
 // merge sort
 
-function merge(leftA, rightA) {
+function merge(leftA, rightA) { // 병합 함수
   var results = [], leftIndex = 0, rightIndex = 0;
 
   while (leftIndex < leftA.length && rightIndex < rightA.length) {
@@ -172,7 +172,7 @@ function mergeSort(array) {
   leftArray = array.slice(0, midpoint),
   rightArray = array.slice(midpoint);
 
-  return merge(mergeSort(leftArray), mergeSort(rightArray));
+  return merge(mergeSort(leftArray), mergeSort(rightArray)); // left와 right로 계속 분할
 }
 
 console.log(mergeSort([6, 1, 23, 4, 2, 3]));
